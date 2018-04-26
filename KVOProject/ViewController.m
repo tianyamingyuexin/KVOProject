@@ -7,23 +7,42 @@
 //
 
 #import "ViewController.h"
-
+#import "Person.h"
+#import "NSObject+LUKVO.h"
 @interface ViewController ()
-
+@property (nonatomic,strong)Person *person;
 @end
 
 @implementation ViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+   _person = [[Person alloc] init];
+   
+    [_person lu_addObserver:self forKeyPath:@"name" options:NSKeyValueObservingOptionNew context:nil];
+    
+    
+  
+    
 }
 
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+{
+    NSLog(@"%@--%@",change,_person.name);
 }
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    static int a = 0;
+    a ++;
+    _person.name = [NSString stringWithFormat:@"%d",a];
+    
+    
+}
+
+
 
 
 @end

@@ -15,6 +15,8 @@
 		5E42637420901B0D00906310 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E42637320901B0D00906310 /* main.m */; };
 		5E42637E20901B0D00906310 /* KVOProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E42637D20901B0D00906310 /* KVOProjectTests.m */; };
 		5E42638920901B0D00906310 /* KVOProjectUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E42638820901B0D00906310 /* KVOProjectUITests.m */; };
+		5E42639820901E2500906310 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E42639720901E2500906310 /* Person.m */; };
+		5E4263A020907F5500906310 /* NSObject+LUKVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E42639F20907F5500906310 /* NSObject+LUKVO.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,10 @@
 		5E42638420901B0D00906310 /* KVOProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KVOProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E42638820901B0D00906310 /* KVOProjectUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVOProjectUITests.m; sourceTree = "<group>"; };
 		5E42638A20901B0D00906310 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5E42639620901E2400906310 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		5E42639720901E2500906310 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		5E42639E20907F5500906310 /* NSObject+LUKVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+LUKVO.h"; sourceTree = "<group>"; };
+		5E42639F20907F5500906310 /* NSObject+LUKVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+LUKVO.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +107,10 @@
 		5E42636320901B0C00906310 /* KVOProject */ = {
 			isa = PBXGroup;
 			children = (
+				5E42639620901E2400906310 /* Person.h */,
+				5E42639720901E2500906310 /* Person.m */,
+				5E42639E20907F5500906310 /* NSObject+LUKVO.h */,
+				5E42639F20907F5500906310 /* NSObject+LUKVO.m */,
 				5E42636420901B0C00906310 /* AppDelegate.h */,
 				5E42636520901B0C00906310 /* AppDelegate.m */,
 				5E42636720901B0C00906310 /* ViewController.h */,
@@ -267,6 +277,8 @@
 			files = (
 				5E42636920901B0C00906310 /* ViewController.m in Sources */,
 				5E42637420901B0D00906310 /* main.m in Sources */,
+				5E4263A020907F5500906310 /* NSObject+LUKVO.m in Sources */,
+				5E42639820901E2500906310 /* Person.m in Sources */,
 				5E42636620901B0C00906310 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -354,7 +366,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -410,7 +422,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -431,7 +443,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				INFOPLIST_FILE = KVOProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.guangshuo.zhibuoguangshuo.KVOProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -444,7 +458,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				INFOPLIST_FILE = KVOProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.guangshuo.zhibuoguangshuo.KVOProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
